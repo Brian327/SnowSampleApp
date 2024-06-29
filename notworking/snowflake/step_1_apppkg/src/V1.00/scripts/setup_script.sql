@@ -8,7 +8,7 @@ RETURNS STRING
 LANGUAGE PYTHON
 RUNTIME_VERSION = '3.11'
 PACKAGES = ('snowflake-snowpark-python')
-IMPORTS = ('/code/myapp.py')
+IMPORTS = ('/code/myapp.py','/code/lib/speciallib.py','/code/lib/pretty/morefunctions.py')
 HANDLER = 'myapp.main';
 
 GRANT USAGE ON PROCEDURE app.myapp() TO APPLICATION ROLE app_role;
