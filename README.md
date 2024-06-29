@@ -1,1 +1,3 @@
 # SnowSampleApp
+
+The goal of this project is to take a sample python app and turn it into a Snowflake Native Application that is called by a Snowflake function.  The whole python app is found in \python  and is also duplicated in \snowflake\....

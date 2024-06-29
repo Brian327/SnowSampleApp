@@ -1,0 +1,13 @@
+manifest_version: 1
+
+version:
+  name: V001
+  label: "Snowflake Sample App v1.0"
+  comment: "Snowflake Sample App Comment"
+
+configuration:
+  log_level: debug
+
+artifacts:
+  setup_script: scripts/setup_script.sql  # path is relative for versions
+  readme: README.md
