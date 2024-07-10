@@ -22,15 +22,24 @@ USE SCHEMA SnowSampleAppPkg.CORE;
 
 -- copy the files from your local file sytem to the snowflake database/schema
 
+---------------------------------------------------------------------------------
+--
+--   You need to create a zip file of the library folder prior to PUTing it
+--
+---------------------------------------------------------------------------------
+
+
 PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/LICENSE @CODE_STAGE overwrite=true auto_compress=false;
 PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/README.md @CODE_STAGE overwrite=true auto_compress=false;
 PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/manifest.yml @CODE_STAGE overwrite=true auto_compress=false;
 PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/scripts/setup_script.sql @CODE_STAGE/scripts overwrite=true auto_compress=false;
 PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/myapp.py @CODE_STAGE/code/ overwrite=true auto_compress=false;
-PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/__init__.py @CODE_STAGE/code/lib overwrite=true auto_compress=false;
-PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/speciallib.py @CODE_STAGE/code/lib overwrite=true auto_compress=false;
-PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/pretty/__init__.py @CODE_STAGE/code/lib/pretty overwrite=true auto_compress=false;
-PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/pretty/morefunctions.py @CODE_STAGE/code/lib/pretty overwrite=true auto_compress=false;
+PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib.zip @CODE_STAGE/code/ overwrite=true auto_compress=false;
+
+-- PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/__init__.py @CODE_STAGE/code/lib overwrite=true auto_compress=false;
+-- PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/speciallib.py @CODE_STAGE/code/lib overwrite=true auto_compress=false;
+-- PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/pretty/__init__.py @CODE_STAGE/code/lib/pretty overwrite=true auto_compress=false;
+-- PUT file:///Programming/SnowSampleApp/notworking/snowflake/step_1_apppkg/src/V1.00/code/lib/pretty/morefunctions.py @CODE_STAGE/code/lib/pretty overwrite=true auto_compress=false;
 
 
 -- this will list out all the files you just PUT
